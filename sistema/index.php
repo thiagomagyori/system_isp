@@ -9,7 +9,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!--CDN bootstrap scripts -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://kit.fontawesome.com/dd7fb49998.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -22,27 +23,41 @@
         <div class="card shadow-2-strong" style="border-radius: 1rem;">
           <div class="card-body p-5 text-center">
 
-            <h3 class="mb-5">ISP Login</h3>
+          
 
-        <form action="">
+            <div class="img_logo">
+              <p>ISP - login</p>
+            <img src="img/logotipo.png" alt="logo tipo">
+            </div>
+
+         <!--método do tipo post ação autenticar.php-->
+        <form method="post" action="autenticar.php">
             <div class="form-outline mb-4">
-            <label class="form-label" for="typeEmailX-2">Email</label>
-              <input type="email" id="typeEmailX-2" class="form-control" placeholder="Entre com seu email" />
+            <label class="form-label" for="typeEmailX-2">Email</label>                                        <!--obriga o preenchimento-->
+              <input name="email" type="email" id="typeEmailX-2" class="form-control" placeholder="Entre com seu email" required />
             </div>
 
             <div class="form-outline mb-4">
             <label class="form-label" for="typePasswordX-2">Senha</label>
-              <input type="password" id="typePasswordX-2" class="form-control" placeholder="Entre com sua senha" />
+              <input name="senha" type="password" id="typePasswordX-2" class="form-control" placeholder="Entre com sua senha" required/>
             </div>
 
-
-            <button class="btn btn-outline-success btn-lg btn-block" type="submit">Entrar</button>
+            <!--Botão -->
+            <div class="d-grid gap-2">
+            <button class="btn btn-primary btn-lg btn-block" type="submit">Entrar</button>
+            </div>
         </form>
            
         <!--linha de divisão-->
             <hr class="my-4">
 
-        <div>Recuperar senha</div>
+        <div class="rec_senha">
+          <a href="">
+          <i class="fa-sharp fa-solid fa-lock"></i>
+            Recuperar senha
+         </a>
+        </div>
+
           </div>
         </div>
       </div>
