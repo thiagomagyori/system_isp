@@ -44,10 +44,31 @@ $telefone_sistema = "(19)97827655";
 $endereco_sistema ="";
 
 
-//ultilizando a variavel que carrega a conexão com banco e passando um parametro                                                                                                aqui  éo texto que vai ser sempre esse nunca vai mudar                             
+
+//verificação validação banco de dados
+
+$query = $pdo->query("SELECT * FROM config");
+$resultado = $query->fetchAll(PDO::FETCH_ASSOC);
+$total_regis = @count($resultado); //count conta o quantidade de registros
+
+if($total_regis == 0) {
+    //ultilizando a variavel que carrega a conexão com banco e passando um parametro                                                                                                aqui  éo texto que vai ser sempre esse nunca vai mudar                             
 $pdo->query("INSERT INTO config SET nome = '$nome_sistema', email = '$email_sistema', senha = '$senha_sistema', telefone = '$telefone_sistema', endereco = '$endereco_sistema', logo = 'logo.png', icone = 'icone.png'");
+} 
+  else{
+    $nome_sistema = $resultado[0]["nome"];
+    $email_sistema = $resultado[0]["email"];     //recuperando os valores do banco
+    $senha_sistema = $resultado[0]["senha"];
+    $telefone_sistema = $resultado[0]["telefone"];
+    $endereco_sistema = $resultado[0]["endereco"];   
+}
 
 
+
+//NOTA
+
+/*fetchAll(): Retorna um array com todas as linhas da consulta, ideal para uma busca por nome ou por endereço. Um estilo de retorno é o 
+PDO::FETCH_ASSOC, ou seja, ele retornará um array associativo exemplo: [“nome”=>”Marcio Lucas”, “login” => “doidera123”, “senha” => “pamonha321”];*/
 
 
 
