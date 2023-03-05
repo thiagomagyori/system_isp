@@ -12,7 +12,7 @@ if(@$_SESSION["nome_user"] == "") {
 
 }
 
-
+require_once("cabecalho.php");
 
 
 
