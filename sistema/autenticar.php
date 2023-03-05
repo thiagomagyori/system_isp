@@ -1,4 +1,6 @@
 <?php
+@session_start();//inicia uma seção
+
 //linkando a pagina de conexão a paina atenticar
 require_once("conection.php");
 
@@ -10,14 +12,13 @@ $senha_form = $_POST["senha"];
 //checando email e senha com banco
 
 if($email_form == $email_sistema and $senha_form == $senha_sistema){
-
-    echo "LOGADO COM SUCESSO!<br>";
-
-     echo $nome_sistema;
-
+    
+    $_SESSION ["nome_user"] = $nome_sistema; // variavel de seção recebe o nome lá do banco
+    echo '<script>window.location="painel"</script>'; //faz a rota para pasta painel
 
 }else {
-    echo "EMAIL OU SENHA INCORREOS!";
+    echo '<script>alert(" Falha ao Logar E-mail ou Senha Incorretos!")</script>';
+    echo '<script>window.location="index.php"</script>';
 }
 
 
