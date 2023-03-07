@@ -37,7 +37,7 @@ catch (Exception $e) {
 
 //inserindo valores na tabela
 
-$nome_sistema = "Thiago";
+$nome_sistema = "Link Telecom";
 $email_sistema = "thiagosilva@gmail.com";
 $senha_sistema = "123";
 $telefone_sistema = "(19)97827655";

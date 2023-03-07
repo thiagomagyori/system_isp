@@ -14,11 +14,6 @@ if(@$_SESSION["nome_user"] == "") {
 
 require_once("cabecalho.php");
 
-
-
-
-
-
-
-
 ?>
+
+<a href="logout.php">sair</a>
