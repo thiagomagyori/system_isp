@@ -42,6 +42,7 @@ $email_sistema = "thiagosilva@gmail.com";
 $senha_sistema = "123";
 $telefone_sistema = "(19)97827655";
 $endereco_sistema ="";
+$nomeuser_sistema = "Thiago";
 
 
 
@@ -53,7 +54,7 @@ $total_regis = @count($resultado); //count conta o quantidade de registros
 
 if($total_regis == 0) {
     //ultilizando a variavel que carrega a conexão com banco e passando um parametro                                                                                                aqui  éo texto que vai ser sempre esse nunca vai mudar                             
-$pdo->query("INSERT INTO config SET nome = '$nome_sistema', email = '$email_sistema', senha = '$senha_sistema', telefone = '$telefone_sistema', endereco = '$endereco_sistema', logo = 'logo.png', icone = 'icone.png'");
+$pdo->query("INSERT INTO config SET nome = '$nome_sistema', email = '$email_sistema', senha = '$senha_sistema', telefone = '$telefone_sistema', endereco = '$endereco_sistema', username = '$nomeuser_sistema', logo = 'logo.png', icone = 'icone.png'");
 } 
   else{
     $nome_sistema = $resultado[0]["nome"];
