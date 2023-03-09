@@ -40,8 +40,8 @@ catch (Exception $e) {
 $nome_sistema = "Link Telecom";
 $email_sistema = "thiagosilva@gmail.com";
 $senha_sistema = "123";
-$telefone_sistema = "(19)97827655";
-$endereco_sistema ="";
+$telefone_sistema = "19988972833";
+$endereco_sistema ="Rua dos trabalhadores";
 $nomeuser_sistema = "Thiago";
 
 
