@@ -29,6 +29,8 @@ require_once("../conection.php"); //verificando antes
 <!-- Ajax para funcionar Mascaras JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script> 
     
+<!--Função js -->
+<script type="text/javascript" src="js/ajax.js"></script>
 
 </head>
 

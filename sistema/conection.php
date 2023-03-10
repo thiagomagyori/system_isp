@@ -46,6 +46,7 @@ $nomeuser_sistema = "Thiago";
 
 
 
+
 //verificação validação banco de dados
 
 $query = $pdo->query("SELECT * FROM config");
@@ -62,6 +63,10 @@ $pdo->query("INSERT INTO config SET nome = '$nome_sistema', email = '$email_sist
     $senha_sistema = $resultado[0]["senha"];
     $telefone_sistema = $resultado[0]["telefone"];
     $endereco_sistema = $resultado[0]["endereco"];   
+    $facebook_sistema = $resultado[0]["facebook"];   
+    $youtube_sistema = $resultado[0]["youtube"];   
+    $instagram_sistema = $resultado[0]["instagram"];   
+    $twitter_sistema = $resultado[0]["twitter"];   
 }
 
 

@@ -16,6 +16,9 @@ require_once("cabecalho.php");
 
 ?>
 
+
+<!--Vai ser disparado einserido no banco com AJAX-->
+<form id="form-config">
 <!-------------------INPUTS1-------------------------------->
 <div class="row">
 
@@ -60,30 +63,73 @@ require_once("cabecalho.php");
     </div>
 </div> <!--Fim col-md-3 -->
 
+<!--SOCIAL-->
+
 <div class="col-md-4">
-<div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Logo tipo (*png)</label>
-  <input name="logo" type="file" class="form-control">
-  <div  style="margin: 15px"><img src="../img/telecom.png" width="40%" alt=""></div>
-</div>
+    <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Facebook</label>
+    <input nome="facebook" type="texte" class="form-control"  placeholder="Facebook se houver" value="<?php echo $facebook_sistema ?>">
+    </div>
 </div> <!--Fim col-md-3 -->
 
 <div class="col-md-4">
-<div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label">Ícone (*png)</label>
-  <input name="logo" type="file" class="form-control">
-  <div style="margin: 15px"><img src="../img/icon.png" width="40px" alt=""></div>
-</div>
+    <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Youtube</label>
+    <input nome="youtube" type="texte" class="form-control" placeholder="Youtube se houver" value="<?php echo $youtube_sistema ?>">
+    </div>
 </div> <!--Fim col-md-3 -->
+
+<div class="col-md-5">
+    <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Instagram</label>
+    <input nome="instagram" type="texte" class="form-control" placeholder="Instagram se houver" value="<?php echo $instagram_sistema ?>">
+    </div>
+</div> <!--Fim col-md-3 -->
+
+<div class="col-md-4">
+    <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Twitter</label>
+    <input nome="twitter" type="texte" class="form-control" placeholder="Twitter se houver"  value="<?php echo $twitter_sistema ?>">
+    </div>
+</div> <!--Fim col-md-3 -->
+
+<!--SOCIAL-->
+
+<div class="col-md-5 col-8">
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label"><p style="color: red; font-weight:600;">Logo tipo (*png)</p></label>
+  <input id="logo" name="logo" type="file" class="form-control" onchange="alteraImg('taget-logo','#logo')"> <!--função-->
+</div>                                                                            <!--passando os 2 parametros-->
+</div> <!--Fim col-md-3 -->
+
+<!--Div imagem -->
+<div class="md-2 col-4">
+   <div><img id="taget-logo" src="../img/telecom.png" width="35%" style="margin-top: 15px" alt="Logo tipo"></div>
+</div>
+
+
+<div class="col-md-5 col-8">
+<div class="mb-3">
+  <label for="exampleFormControlInput1" class="form-label"><p style="color: red; font-weight:600;">Ícone (*png)</p></label>
+  <input id="icone" name="icone" type="file" class="form-control" onchange="alteraImg('target-icone', '#icone')"> <!--função-->
+</div>                                                         <!--passando os 2 parametros-->
+</div> <!--Fim col-md-3 -->
+
+<!--Div imagem -->
+<div class="md-2 col-4">
+   <div><img  id="target-icone" src="../img/icon.png" width="40px" style="margin-top: 29px" alt="Icone"></div>
+</div>
 
 </div> <!--Fim row -->
+
+
 
 <!----------------------BOTÃO---------------------------->
 
 <div align ="right">
 <button type="button" class="btn btn-success">Salvar</button>
 </div>
-
+</form>
 
 
 
