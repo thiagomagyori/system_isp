@@ -37,7 +37,7 @@ require_once("../conection.php"); //verificando antes
 <!--Navbar bootstrap-->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a class="navbar-brand" href="index.php">Olá <?php echo $nomeuser_sistema?></a>
+    <a style="color: darkslategray; font-weight:600;" class="navbar-brand" href="index.php">Bem vindo: (<?php echo $nome_user_sistema?>)</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>

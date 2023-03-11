@@ -1,7 +1,7 @@
 <?php
 @session_start();//inicia uma seção
 
-//linkando a pagina de conexão a paina atenticar
+//chamando a pagina de conexão que carrega a canexão com banco
 require_once("conection.php");
 
 //recuperando dados digitados no formulario e passando eles para uma variavel
@@ -13,7 +13,7 @@ $senha_form = $_POST["senha"];
 
 if($email_form == $email_sistema and $senha_form == $senha_sistema){
     
-    $_SESSION ["nome_user"] = $nome_sistema; // variavel de seção recebe o nome lá do banco
+    $_SESSION ["nome_user"] = $nome_sistema; // nome_user variavel de seção recebe o nome lá do banco
     echo '<script>window.location="painel"</script>'; //faz a rota para pasta painel
 
 }else {

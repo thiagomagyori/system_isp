@@ -42,7 +42,7 @@ $email_sistema = "thiagosilva@gmail.com";
 $senha_sistema = "123";
 $telefone_sistema = "19988972833";
 $endereco_sistema ="Rua dos trabalhadores";
-$nomeuser_sistema = "Thiago";
+$nome_user_sistema ="Thiago";
 
 
 
@@ -58,6 +58,7 @@ if($total_regis == 0) {
 $pdo->query("INSERT INTO config SET nome = '$nome_sistema', email = '$email_sistema', senha = '$senha_sistema', telefone = '$telefone_sistema', endereco = '$endereco_sistema', username = '$nomeuser_sistema', logo = 'logo.png', icone = 'icone.png'");
 } 
   else{
+    $nome_user_sistema = $resultado[0]["username"];
     $nome_sistema = $resultado[0]["nome"];
     $email_sistema = $resultado[0]["email"];     //recuperando os valores do banco
     $senha_sistema = $resultado[0]["senha"];
