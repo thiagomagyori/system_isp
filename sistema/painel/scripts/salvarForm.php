@@ -17,19 +17,22 @@ $twitter_campo = $_POST['twitter'];
 
 //SCRIPT PARA SUBIR FOTO NO SERVIDOR
 $nome_img = 'logo.png';
-$caminho = '../../img/' .$nome_img;//caminho da pasta imagem
+$caminho = '../../img/'.$nome_img;//caminho da pasta imagem
 
 $imagem_temp = @$_FILES['logo']['tmp_name']; 
 
 //checa se está vazio
-if(@$_FILES['logo']['name'] != ""){
-    $ext = (pathinfo($nome_img, PATHINFO_EXTENSION));
-    echo"$ext";
-	if($ext == 'png'){ //checa se a extenção da imagem é.png 
-		
-		move_uploaded_file($imagem_temp, $caminho);
-	}else{
-		echo 'Extensão de imagem não permitida! insira imagens apenas PNG!';
+if(@$_FILES['logo']['name'] != "")
+{                 
+    $extension = pathinfo($nome_img, PATHINFO_EXTENSION);//pathinfo — Retorna informações sobre um caminho de arquivo
+
+	if($extension == "png") //checa se a extenção da imagem é.png 
+	{
+		move_uploaded_file($imagem_temp, $caminho);//move para pasta
+	}
+	else
+	{
+		echo 'Extensão de imagem não permitida, insira imagens apenas PNG!';
 		exit();
 	}
 }

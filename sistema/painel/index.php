@@ -105,7 +105,7 @@ require_once("cabecalho.php");
 <div class="col-md-5 col-8">
 <div class="mb-3">
   <label for="exampleFormControlInput1" class="form-label"><p style="color: red; font-weight:600;">Logo tipo apenas imagem(*png)</p></label>
-  <input id="logo" name="logo" type="file" class="form-control" onchange="alteraImg('taget-logo','#logo')" required> <!--função-->
+  <input id="logo" name="logo" type="file" class="form-control" onchange="alteraImg('taget-logo','#logo')"> <!--função-->
 </div>                                                                            <!--passando os 2 parametros-->
 </div> <!--Fim col-md-3 -->
 
