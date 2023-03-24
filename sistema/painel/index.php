@@ -65,7 +65,7 @@ require_once("cabecalho.php");
 
 <div class="col-md-4">
     <div class="mb-3">
-    <label for="exampleFormControlInput1" class="form-label">Endereço: empresa</label>
+    <label for="exampleFormControlInput1" class="form-label">Endereço: Empresa</label>
     <input name="end" type="text" class="form-control" value="<?php echo $endereco_sistema ?>" required>
     </div>
 </div> <!--Fim col-md-3 -->
@@ -100,11 +100,18 @@ require_once("cabecalho.php");
     </div>
 </div> <!--Fim col-md-3 -->
 
+<div class="col-md-2">
+    <div class="mb-3">
+    <label for="exampleFormControlInput1" class="form-label">Cor Em Hexadecimal</label>
+    <input name="cor" type="text" class="form-control" placeholder="#00c1c1"  value="<?php echo $cor_sistema ?>">
+    </div>
+</div> <!--Fim col-md-3 -->
+
 <!--SOCIAL-->
 
 <div class="col-md-5 col-8">
 <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label"><p style="color: red; font-weight:600;">Logo tipo apenas imagem(*png)</p></label>
+  <label for="exampleFormControlInput1" class="form-label"><p style="color: red; font-weight:600;">Logo tipo Apenas Imagem(*png)</p></label>
   <input id="logo" name="logo" type="file" class="form-control" onchange="alteraImg('taget-logo','#logo')"> <!--função-->
 </div>                                                                            <!--passando os 2 parametros-->
 </div> <!--Fim col-md-3 -->
@@ -117,14 +124,14 @@ require_once("cabecalho.php");
 
 <div class="col-md-5 col-8">
 <div class="mb-3">
-  <label for="exampleFormControlInput1" class="form-label"><p style="color: red; font-weight:600;">Ícone apenas imagem(*png)</p></label>
+  <label for="exampleFormControlInput1" class="form-label"><p style="color: red; font-weight:600;">Ícone Apenas Imagem(*png)</p></label>
   <input id="icone" name="icone" type="file" class="form-control" onchange="alteraImg('target-icone', '#icone')"> <!--função-->
 </div>                                                         <!--passando os 2 parametros-->
 </div> <!--Fim col-md-3 -->
 
 <!--Div imagem -->
 <div class="md-2 col-4">
-   <div><img  id="target-icone" src="../img/icon.png" width="40px" style="margin-top: 29px" alt="Icone"></div>
+   <div><img  id="target-icone" src="../img/icone.png" width="40px" style="margin-top: 29px" alt="Icone"></div>
 </div>
 
 </div> <!--Fim row -->

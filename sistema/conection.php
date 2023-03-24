@@ -35,7 +35,7 @@ catch (Exception $e) {
     echo $e; //aqui só deixo enquanto estou desenvolvendo, na hora de hospedar removo
 }
 
-//inserindo valores na tabela
+//inserindo valores padrão na tabela
 
 $nome_sistema = "Link Telecom";
 $email_sistema = "thiagosilva@gmail.com";
@@ -43,7 +43,7 @@ $senha_sistema = "123";
 $telefone_sistema = "19988972833";
 $endereco_sistema ="Rua dos trabalhadores";
 $nome_user_sistema ="Thiago";
-
+$cor_sistema ="#01B2A7";
 
 
 
@@ -55,7 +55,7 @@ $total_regis = @count($resultado); //count conta o quantidade de registros
 
 if($total_regis == 0) {
     //ultilizando a variavel que carrega a conexão com banco e passando um parametro                                                                                                aqui  éo texto que vai ser sempre esse nunca vai mudar                             
-$pdo->query("INSERT INTO config SET nome = '$nome_sistema', email = '$email_sistema', senha = '$senha_sistema', telefone = '$telefone_sistema', endereco = '$endereco_sistema', username = '$nomeuser_sistema', logo = 'logo.png', icone = 'icone.png'");
+$pdo->query("INSERT INTO config SET nome = '$nome_sistema', email = '$email_sistema', senha = '$senha_sistema', telefone = '$telefone_sistema', endereco = '$endereco_sistema', username = '$nomeuser_sistema', logo = 'logo.png', icone = 'icone.png', corsystem ='$cor_sistema'");
 } 
   else{
     $nome_user_sistema = $resultado[0]["username"];
@@ -68,6 +68,7 @@ $pdo->query("INSERT INTO config SET nome = '$nome_sistema', email = '$email_sist
     $youtube_sistema = $resultado[0]["youtube"];   
     $instagram_sistema = $resultado[0]["instagram"];   
     $twitter_sistema = $resultado[0]["twitter"];   
+    $cor_sistema = $resultado[0]["corsystem"];   
 }
 
 
