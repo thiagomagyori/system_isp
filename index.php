@@ -27,7 +27,7 @@ require_once('sistema/conection.php')//chamando a conexão com banco
 <style type="text/css">
 
     a, a:hover {
-  color: <?php echo $cor_sistema ?>;
+  color: <?php echo $cor_sistema ?>
 }
 
 
@@ -49,25 +49,54 @@ require_once('sistema/conection.php')//chamando a conexão com banco
 }
 
 .navbar-default {
-  background: <?php echo $cor_sistema ?>;
+  background: <?php echo $cor_sistema ?>
 }
 
 .form-control:focus {
-  border-color: <?php echo $cor_sistema ?>;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 2px <?php echo $cor_sistema ?>;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 2px <?php echo $cor_sistema ?>;
+  border-color: <?php echo $cor_sistema ?>
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 2px <?php echo $cor_sistema ?>
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075), 0 0 2px <?php echo $cor_sistema ?>
 }
 
 .service .carousel-indicators .active {
-  background: <?php echo $cor_sistema ?>;
+  background: <?php echo $cor_sistema ?>
 }
 
 .btn-theme {
-  background: <?php echo $cor_sistema ?>;
+  background: <?php echo $cor_sistema ?>
 }
 
 .contact-widget i {
-  color: <?php echo $cor_sistema ?>;
+  color: <?php echo $cor_sistema ?>
+}
+
+#intro .btn-get-started {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 12px 32px;
+  border-radius: 3px;
+  transition: 0.5s;
+  line-height: 1;
+  margin: 10px;
+  color: #fff;
+  -webkit-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+  border: 2px solid <?php echo $cor_sistema ?>;
+}
+
+#intro .btn-get-started:hover {
+  background: <?php echo $cor_sistema ?>;
+  color: #fff;
+  text-decoration: none;
+}
+
+footer {
+	background:  <?php echo $cor_sistema ?>;
+	color: #fff;
+	padding: 50px 0 30px;
 }
 
 </style>
@@ -89,12 +118,12 @@ require_once('sistema/conection.php')//chamando a conexão com banco
       </div>
       <div class="navigation collapse navbar-collapse navbar-ex1-collapse">
         <ul class="nav navbar-nav">
-          <li class="current"><a href="#intro">Home</a></li>
-          <li><a href="#about">About</a></li>
-          <li><a href="#services">Service</a></li>
-          <li><a href="#portfolio">Works</a></li>
-          <li><a href="#team">Team</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li class="current"><a href="#intro">HOME</a></li>
+          <li><a href="#about">VANTAGENS</a></li>
+          <li><a href="#services">COBERTURA</a></li>
+          <li><a href="#portfolio">PLANOS</a></li>
+          <li><a href="#team">CENTRAL DO ASSINANTE</a></li>
+          <li><a href="#contact">CONTATO</a></li>
         </ul>
       </div>
     </div>
@@ -114,36 +143,12 @@ require_once('sistema/conection.php')//chamando a conexão com banco
               <div class="carousel-content">
                 <h2 class="animated fadeInDown">Alstar web studio</h2>
                 <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                <a href="#about" class="btn-get-started animated fadeInUp">Read More</a>
               </div>
             </div>
           </div>
-          
-          <!-- Slide 2 -->
-          <div class="item">
-            <div class="carousel-background"><img src="img/intro/2.jpg" alt=""></div>
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animated fadeInDown">Creativity and technology</span></h2>
-                <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                <a href="#about" class="btn-get-started animated fadeInUp">Read More</a>
-              </div>
-            </div>
-          </div>
+      
 
-          <!-- Slide 3 -->
-          <div class="item">
-            <div class="carousel-background"><img src="img/intro/3.jpg" alt=""></div>
-            <div class="carousel-container">
-              <div class="carousel-content">
-                <h2 class="animated fadeInDown">Sequi ea ut et est quaerat</span></h2>
-                <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
-                <a href="#about" class="btn-get-started animated fadeInUp">Read More</a>
-              </div>
-            </div>
-          </div>
-
-        </div>
+        </div><!-- FIM BANNER -->
 
         <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon fa fa-angle-left" aria-hidden="true"></span>
@@ -165,7 +170,7 @@ require_once('sistema/conection.php')//chamando a conexão com banco
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
           <div class="section-heading">
-            <h2>About us</h2>
+            <h2>Sobre Nós</h2>
             <div class="heading-line"></div>
             <p>We’ve been building unique digital products, platforms, and experiences for the past 6 years.</p>
           </div>
@@ -215,7 +220,7 @@ require_once('sistema/conection.php')//chamando a conexão com banco
           <div class="section-heading">
             <h2>Services</h2>
             <div class="heading-line"></div>
-            <p>We’ve been building unique digital products, platforms, and experiences for the past 6 years.</p>
+            <p>Wee been building unique digital products, platforms, and experiences for the past 6 years.</p>
           </div>
         </div>
       </div>
