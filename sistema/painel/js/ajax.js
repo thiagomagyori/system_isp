@@ -1,3 +1,35 @@
+$(document).ready(function() {    
+    listar();    
+} );
+
+
+function listar(){
+    $.ajax({
+        url: pagina + "/listar.php",
+        method: 'POST',
+        data: $('#form').serialize(),
+        dataType: "html",
+
+        success:function(result){
+            $("#listar").html(result);
+            $('#mensagem-excluir').text('');
+        }
+    });
+}
+
+
+
+function inserir(){
+    $('#mensagem').text('');
+    $('#titulo_inserir').text('Inserir Registro');
+    $('#modalForm').modal('show');
+    limparCampos();
+}
+
+
+
+
+
 /*passando 2 parametros*/
 function alteraImg(img, input) {
     var target = document.getElementById(img);/*pq ela vemprimeiro ao selecionar*/

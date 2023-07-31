@@ -763,7 +763,11 @@ ul.social-network li a i{
 /* ================================
 Footer
 ================================= */
-
+footer
+{
+	color: #fff;
+	padding: 50px 0 30px;
+}
 
 footer a {
 	color: #fff;

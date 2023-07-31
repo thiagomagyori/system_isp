@@ -93,11 +93,7 @@ require_once('sistema/conection.php')//chamando a conexão com banco
   text-decoration: none;
 }
 
-footer {
-	background:  <?php echo $cor_sistema ?>;
-	color: #fff;
-	padding: 50px 0 30px;
-}
+
 
 </style>
 
@@ -136,13 +132,14 @@ footer {
 
         <div class="carousel-inner" role="listbox">
 
-          <!-- Slide 1 -->
+          <!-- banner 1 -->
+           <!--ele é dividido em 3 partes imagem, Titulo, e Sub titulo-->
           <div class="item active">
             <div class="carousel-background"><img src="img/intro/1.jpg" alt=""></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animated fadeInDown">Alstar web studio</h2>
-                <p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+                <h2 class="animated fadeInDown">TEXTO</h2>
+                <p class="animated fadeInUp">TEXTO</p>
               </div>
             </div>
           </div>
@@ -170,7 +167,7 @@ footer {
       <div class="row">
         <div class="col-md-offset-2 col-md-8">
           <div class="section-heading">
-            <h2>Sobre Nós</h2>
+            <h2>Vantagens Exclusivas</h2>
             <div class="heading-line"></div>
             <p>We’ve been building unique digital products, platforms, and experiences for the past 6 years.</p>
           </div>
@@ -569,7 +566,10 @@ footer {
   </section>
 
   <!-- Footer -->
-  <footer>
+  <footer
+
+  style="background:  <?php echo $cor_sistema ?>"><!--trazendo cor do banco de dados para o footer -->
+
     <div class="container">
       <div class="row">
         <div class="col-md-12">

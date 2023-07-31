@@ -1,5 +1,5 @@
 <?php
-//dashboard
+//dashboard INDEX DO PAINEL ADM
 //chamando a variavel de seção que foi criada em autemticar
 @session_start();
 require_once("../conection.php");
@@ -150,9 +150,9 @@ require_once("cabecalho.php");
 
 </div> <!--Fim container -->
 
-<a href="logout.php">sair</a>
+<a href="logout.php">Sair</a>
 
-<!--Script que vai mandar todos campos do formulario para o arquivo que vai fazer a inserção aobanco-->
+<!--Script que vai mandar todos campos do formulario para o arquivo que vai fazer a inserção ao banco-->
 <!--que é o salvarForm.php que vai fazer o processameto-->
 <script type="text/javascript">
 $("#form-config").submit(function () {
@@ -163,7 +163,7 @@ event.preventDefault(); /*não deixa carregar a pg*/
 var formData = new FormData(this); /*variavel que vai receber todos inputs do formulario*/
 
 $.ajax({  
-    url: "scripts/salvarForm.php", /*caminho onde ele vai redirecionar e vai estar o arquivo que vai salvar os dados do inputs*/
+    url: "scripts/salvarForm.php", /*caminho onde ele vai redirecionar todos dados do form-config e vai mandar esses dados via metodo post para o arquivo salvarForm.php é lá que vai ter todos nomes dos imputs todos campos*/
     type: 'POST',
     data: formData,
 
@@ -171,10 +171,12 @@ $.ajax({
     success: function (mensagem) {
         $('#mensagem').text('');
         $('#mensagem').removeClass()
-        if (mensagem.trim() == "Salvo com Sucesso") {
+        if (mensagem.trim() == "Dados Salvo com Sucesso") {
         location.reload();/*para atualizar a pg para carregar os novos dados do input*/
         $('#mensagem').addClass('text-success')
-        $('#mensagem').text(mensagem)         
+        $('#mensagem').text(mensagem)    
+        /*se o insert for feito no banco de dados com sucesso ele exibe a mensagem Dados Salvo com Sucesso */     
+        
 /*senão cai no else e retorna o erro*/
         } else {
 

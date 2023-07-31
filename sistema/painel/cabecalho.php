@@ -19,6 +19,8 @@ require_once("../conection.php"); //verificando antes
     <script src="https://kit.fontawesome.com/dd7fb49998.js" crossorigin="anonymous"></script>
     <link rel="shortcut icon" type="image/x-icon" href="../img/icon.png">
     <link rel="stylesheet" href="css/stylepainel.css">
+    <!--cdn icon baotstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <!--cdn jquery -->
     <script
 			  src="https://code.jquery.com/jquery-3.6.1.js"
@@ -34,6 +36,11 @@ require_once("../conection.php"); //verificando antes
 <!--Função js -->
 <script type="text/javascript" src="js/ajax.js"></script>
 
+<link rel="styesheet" type="text/css" href="css/style.css">
+
+<link rel="stylesheet" type="text/css" href="DataTables/datatables.min.css"/> 
+	<script type="text/javascript" src="DataTables/datatables.min.js"></script>
+
 </head>
 
 <!--Navbar bootstrap-->
@@ -46,10 +53,10 @@ require_once("../conection.php"); //verificando antes
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Configurações</a>
+          <a class="nav-link active" aria-current="page" href="index.php">Configurações Do Site</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Link</a>
+          <a class="nav-link" href="banner.php">Banner Imagem</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
