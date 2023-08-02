@@ -46,18 +46,20 @@ require_once("../conection.php"); //verificando antes
 <!--Navbar bootstrap-->
 <nav class="navbar navbar-expand-lg bg-body-tertiary">
   <div class="container-fluid">
-    <a style="color: darkslategray; font-weight:600;" class="navbar-brand" href="index.php">Bem vindo: (<?php echo $nome_user_sistema?>)</a>
+    <a class="navbar-brand" href="index.php"><img src="../img/logo.png" style="border-radius: 50%;" width="75px" height="70px"></a>
+  <p style="color: darkslategray; font-weight:600; font-size: 16px; padding-top: 16px; ">Bem vindo: <?php echo $nome_user_sistema?></p>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="index.php">Configurações Do Site</a>
+          <a class="nav-link" aria-current="page" href="index.php"> <i class="bi bi-house-gear"></i> Configurações</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="banner.php">Banner Imagem</a>
         </li>
+       <!-- 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             Dropdown
@@ -68,10 +70,17 @@ require_once("../conection.php"); //verificando antes
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Something else here</a></li>
           </ul>
-        </li>
+        </li> -->
+
         <li class="nav-item">
-          <a class="nav-link disabled">Disabled</a>
+          <a class="nav-link" href="../../index.php"> <i class="bi bi-browser-edge"></i> Ir para site</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="logout.php"> <i  class="bi bi-box-arrow-right"> </i> Sair</a>
+        </li>
+
+
       </ul>
       
     </div>

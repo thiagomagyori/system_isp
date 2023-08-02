@@ -150,8 +150,6 @@ require_once("cabecalho.php");
 
 </div> <!--Fim container -->
 
-<a href="logout.php">Sair</a>
-
 <!--Script que vai mandar todos campos do formulario para o arquivo que vai fazer a inserção ao banco-->
 <!--que é o salvarForm.php que vai fazer o processameto-->
 <script type="text/javascript">
