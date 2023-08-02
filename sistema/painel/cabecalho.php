@@ -54,11 +54,21 @@ require_once("../conection.php"); //verificando antes
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" aria-current="page" href="index.php"> <i class="bi bi-house-gear"></i> Configurações</a>
+          <a class="nav-link" aria-current="page" href="index.php"> <i class="bi bi-house-check-fill"></i> Configurações</a>
         </li>
+        
         <li class="nav-item">
-          <a class="nav-link" href="banner.php">Banner Imagem</a>
+          <a class="nav-link" href="banner.php"> <i class="bi bi-images"></i> Banner imagem</a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#"> <i class="bi bi-person-plus-fill"></i> Clientes</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#"> <i class="bi bi-cash-coin"></i> Financeiro</a>
+        </li>
+
        <!-- 
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">

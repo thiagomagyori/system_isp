@@ -53,10 +53,16 @@ $pagina = "banner"; //usar nome que está na variavel para fazer o redirecioname
     <div class="col-md-12 col-8">
         <div class="mb-3">
         <label for="exampleFormControlInput1" class="form-label">Banner:</label>
-        <input id="foto-banner" name="foto-banner" type="file" class="form-control" onchange="alteraImg('taget','#foto-banner')"> <!--função-->
+        <input id="foto_campo" name="foto_campo" type="file" class="form-control" on
+        change="alteraImg('taget','#foto-banner')"> <!--função-->
         </div>                                                                            <!--passando os 2 parametros-->
     </div> <!--Fim col-md-3 -->
     </div>
+
+    <!--campo oculto que vai receber o ID na hora da edição -->
+    <input type="hidden" name="id" id="id">
+    <!--campo na onde vai aparecer a mensagem -->
+    <small><div id="mensagem" align="center"></div></small>
 
 <!--Div imagem -->
 <div class="md-4 col-4">
@@ -64,11 +70,12 @@ $pagina = "banner"; //usar nome que está na variavel para fazer o redirecioname
 </div>
 
 
-        </form>
+       
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-success">Salvar</button>
+        <button type="submit" class="btn btn-success">Salvar</button>
       </div>
+      </form><!--fim formulario-->
     </div>
   </div>
 </div>

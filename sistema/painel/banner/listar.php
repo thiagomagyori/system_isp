@@ -37,9 +37,9 @@ echo <<<HTML
 <tr>
 <td>{$titulo}</td>
 <td class="esc">{$subtituloF}</td>
-<td class="esc"><img src="img/banners/{$imagem}" width="30px"></td>
+<td class="esc"><img src="../img/banners/{$imagem}" width="30px"></td>
 <td>
-	<big><a href="#" onclick="editar('{$id}','{$titulo}', '{$subtitulo}', '{$imaem}')" title="Editar Dados"> <i class="bi bi-pencil-square"></i> </a></big>
+	<big><a href="#" onclick="editar('{$id}','{$titulo}', '{$subtitulo}', '{$imagem}')" title="Editar Dados"> <i class="bi bi-pencil-square"></i> </a></big>
 
 	
 	<li class="dropdown head-dpdn2" style="display: inline-block;">
@@ -87,14 +87,14 @@ HTML;
 
 
 <script type="text/javascript">
-	function editar(id, titulo, subtitulo, foto){
+	function editar(id, titulo, subtitulo, foto_campo){
 		$('#id').val(id);
 		$('#titulo').val(titulo);
 		$('#subtitulo').val(subtitulo);
 		$('#titulo_inserir').text('Editar Registro');
 		$('#modalForm').modal('show');
-		$('#foto').val('');
-		$('#target').attr('src','img/banners/' + foto);
+		$('#foto_campo').val('');
+		$('#target').attr('src','../img/banners/' + foto_campo);
 	}
 
 
@@ -104,8 +104,8 @@ HTML;
 		$('#id').val('');
 		$('#titulo').val('');
 		$('#subtitulo').val('');		
-		$('#foto').val('');
-		$('#target').attr('src','img/banners/sem-foto.png');
+		$('#foto_campoF').val('');
+		$('#target').attr('src','../img/banners/sem-foto.png');
 	}
 
 </script>
