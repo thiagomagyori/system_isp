@@ -109,7 +109,8 @@ require_once('sistema/conection.php')//chamando a conexão com banco
         </button>
 
         <!-- Logo text or image -->
-        <a class="navbar-brand" href="index.html"><?php echo $nome_sistema ?></a>
+        <a class="navbar-brand" href="index.php"><img src="sistema/img/logo.png" style="border-radius: 50%; padding-bottom: 7px;" width="45px" height="45px"></a>
+        <a class="navbar-brand" href="index.html" style="padding-top:27px;"><?php echo $nome_sistema ?></a>
 
       </div>
       <div class="navigation collapse navbar-collapse navbar-ex1-collapse">
@@ -125,27 +126,48 @@ require_once('sistema/conection.php')//chamando a conexão com banco
     </div>
   </nav>
 
-  <!-- intro area -->
-  <section id="intro">
+<!-- intro area -->
+<section id="intro">
     <div class="intro-container">
       <div id="introCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+<?php
+$query = $pdo->query("SELECT * FROM banner order by id asc");
+$res = $query->fetchAll(PDO::FETCH_ASSOC);
+$total_reg = @count($res);
+if($total_reg > 0){
+?>
 
         <div class="carousel-inner" role="listbox">
 
-          <!-- banner 1 -->
-           <!--ele é dividido em 3 partes imagem, Titulo, e Sub titulo-->
-          <div class="item active">
-            <div class="carousel-background"><img src="img/intro/1.jpg" alt=""></div>
+        <?php 
+        for($i=0; $i < $total_reg; $i++){
+          $id = $res[$i]['id'];
+          $titulo = $res[$i]['titulo'];		
+          $subtitulo = $res[$i]['subtitulo'];		
+          $imagem = $res[$i]['imagem'];	
+
+          if ($i == 0){
+          $active = "active";
+          }
+          else{
+              $active = "";
+          }
+        ?>
+
+          <!-- Slide 1 -->
+          <div class="item <?php echo $active ?>">
+            <div class="carousel-background"><img src="sistema/img/banners/<?php echo $imagem ?>" alt="Banner"></div>
             <div class="carousel-container">
               <div class="carousel-content">
-                <h2 class="animated fadeInDown">TEXTO</h2>
-                <p class="animated fadeInUp">TEXTO</p>
+                <h2 class="animated fadeInDown"><?php echo $titulo ?></h2>
+                <p class="animated fadeInUp"><?php echo $subtitulo ?></p>
               </div>
             </div>
           </div>
-      
+          <?php }?> <!-- fecha o for-->
 
-        </div><!-- FIM BANNER -->
+        </div>
+        <?php }?>
 
         <a class="carousel-control-prev" href="#introCarousel" role="button" data-slide="prev">
           <span class="carousel-control-prev-icon fa fa-angle-left" aria-hidden="true"></span>
@@ -160,6 +182,40 @@ require_once('sistema/conection.php')//chamando a conexão com banco
       </div>
     </div>
   </section><!-- #intro -->
+
+  <!-- About -->
+  <section id="about" class="home-section bg-white">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-offset-2 col-md-8">
+          <div class="section-heading">
+            <h2>About us</h2>
+            <div class="heading-line"></div>
+            <p>We’ve been building unique digital products, platforms, and experiences for the past 6 years.</p>
+          </div>
+        </div>
+      </div>
+      <div class="row wow fadeInUp">
+        <div class="col-md-6 about-img">
+          <img src="img/about-img.jpg" alt="">
+        </div>
+
+        <div class="col-md-6 content">
+          <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elite storium paralate</h2>
+          <h3>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum.</h3>
+          <p>
+            Ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
+            voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+            proident, sunt in culpa qui officia deserunt mollit anim id est laborum Libero justo laoreet sit amet
+            cursus sit amet dictum sit. Commodo sed egestas egestas fringilla phasellus faucibus scelerisque eleifend
+            donec Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+            laborum
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- About -->
   <section id="about" class="home-section bg-white">

@@ -67,35 +67,47 @@ $("#form").submit(function () {
 
 
 
-function excluir(id){
+$("#form-excluir").submit(function () {
+ 
+    event.preventDefault();
+    var formData = new FormData(this);
+
     $.ajax({
         url: pagina + "/excluir.php",
-        method: 'POST',
-        data: {id},
-        dataType: "text",
+        type: 'POST',
+        data: formData,
 
-        success: function (mensagem) {            
-            if (mensagem.trim() == "Excluído com Sucesso") {                
+        success: function (mensagem) {         
+
+            if (mensagem.trim() == "Excluído com Sucesso") {  
+            $('#btn-fechar-excluir').click();              
                 listar();                
             } else {
                 $('#mensagem-excluir').addClass('text-danger')
                 $('#mensagem-excluir').text(mensagem)
             }
 
-        },      
+        },
 
+        cache: false,
+        contentType: false,
+        processData: false,
+
+    
     });
-}
+
+});
 
 
 
 
 
 
-/* alterar imagem passando 2 parametros*/
-function alteraImg(img, input) {
-    var target = document.getElementById(img);/*pq ela vem primeiro ao selecionar*/
-    var file = document.querySelector(input).files[0];
+
+
+function alterarImg(img, input){
+    var target = document.getElementById(img);
+    var file = document.querySelector('#'+input).files[0];
 
     var reader = new FileReader();
 
@@ -110,8 +122,6 @@ function alteraImg(img, input) {
         target.src = "";
     }
 }
-
-
 /*função ela vai pegar oque vem do input name="logo" ao receber uma imagem ele vai exibir essa imagem no id go-Logo*/
 
 /*ou seja recebe em cima no input e exibe em baixo*/
